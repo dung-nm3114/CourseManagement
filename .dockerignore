@@ -1,0 +1,9 @@
+# .dockerignore
+**/.git
+**/.vs
+**/.vscode
+**/bin
+**/obj
+**/out
+**/.DS_Store
+**/docker-compose*
