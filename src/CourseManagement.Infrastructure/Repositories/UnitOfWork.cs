@@ -1,8 +1,8 @@
 namespace CourseManagement.Infrastructure.Repositories;
-public class unitOfWork : IUnitOfWork
+public class UnitOfWork : IUnitOfWork
 {
     private readonly ApplicationDbContext _context;
-    public unitOfWork(ApplicationDbContext context)
+    public UnitOfWork(ApplicationDbContext context)
     {
         _context = context;
     }

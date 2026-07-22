@@ -7,4 +7,6 @@ public interface IUserRepository
 
     // Thêm một User mới vào hệ thống
     Task AddUserAsync(User user);
+
+    Task<User?> GetByIdAsync(Guid userId);
 }

@@ -29,8 +29,8 @@ public class JwtTokenGenerator : IJwtTokenGenerator
         // 2. Đóng gói thông tin định danh của User vào Claims
         var claims = new[]
         {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Email, user.Email),
             new Claim("username", user.Username),
             new Claim(ClaimTypes.Role, user.Role.ToString()) // Rất quan trọng để phân quyền [Authorize(Roles = "...")]
         };
